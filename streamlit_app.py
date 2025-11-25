@@ -217,12 +217,12 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter):
                     '2024 LV': round(cost_lv_24, 2),
                     'Factura 2024': round(bill_2024, 2),
                     
-                    # Detalles 2025
-                    '2025 SC Base': round(base_sc_cost, 2),
-                    '2025 Desc.': round(discount_amount, 2),
-                    '2025 App Fee': round(cost_app_25, 2),
-                    '2025 LV': round(cost_lv_25, 2),
-                    'Factura 2025': round(bill_2025, 2),
+                    # Detalles 2026 (Simulación Política Nueva con Datos 2025)
+                    '2026 SC Base': round(base_sc_cost, 2),
+                    '2026 Desc.': round(discount_amount, 2),
+                    '2026 App Fee': round(cost_app_25, 2),
+                    '2026 LV': round(cost_lv_25, 2),
+                    'Factura 2026': round(bill_2025, 2),
                     
                     'Ahorro': round(bill_2024 - bill_2025, 2)
                 })
@@ -235,7 +235,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter):
         cols = ['Pais', 'Mes', 'SC Total', 'SC App', 'SC Voz', 'Adopcion (%)', 'Llamadas Validas', 
                 'Cancelado Posterior', 'Cancelado Momento', 
                 '2024 SC', '2024 LV', 'Factura 2024',
-                '2025 SC Base', '2025 Desc.', '2025 App Fee', '2025 LV', 'Factura 2025', 'Ahorro']
+                '2026 SC Base', '2026 Desc.', '2026 App Fee', '2026 LV', 'Factura 2026', 'Ahorro']
         return pd.DataFrame(columns=cols)
             
     return pd.DataFrame(all_results)
@@ -311,7 +311,7 @@ with tab_fin:
     col1, col2, col3, col4 = st.columns(4)
 
     total_2024 = df_view['Factura 2024'].sum()
-    total_2025 = df_view['Factura 2025'].sum()
+    total_2025 = df_view['Factura 2026'].sum()
     
     # KPI Real (solo si existe columna)
     if 'Facturacion Real' in df_view.columns:
@@ -322,16 +322,16 @@ with tab_fin:
     avg_adoption = df_view['Adopcion (%)'].mean() if not df_view.empty else 0
 
     col1.metric("Facturación Est. 2024", f"${total_2024:,.0f}")
-    col2.metric("Facturación Est. 2025", f"${total_2025:,.0f}", delta=f"${total_savings:,.0f} Ahorro")
+    col2.metric("Facturación Est. 2026", f"${total_2025:,.0f}", delta=f"${total_savings:,.0f} Ahorro")
     col3.metric("Adopción Promedio App", f"{avg_adoption:.1f}%")
     col4.metric("Descuento Aplicado", f"{app_discount_pct}%")
 
     st.subheader("📉 Comparativa de Costos (2024 vs 2025 vs Real)")
     if not df_view.empty:
-        df_monthly = df_view.groupby('Mes')[['Factura 2024', 'Factura 2025']].sum().reset_index()
+        df_monthly = df_view.groupby('Mes')[['Factura 2024', 'Factura 2026']].sum().reset_index()
         
         # Add Real to melt if exists
-        value_vars = ['Factura 2024', 'Factura 2025']
+        value_vars = ['Factura 2024', 'Factura 2026']
         if 'Facturacion Real' in df_view.columns:
             # Aggregate real billing too
             df_real_sum = df_view.groupby('Mes')['Facturacion Real'].sum().reset_index()
@@ -343,7 +343,7 @@ with tab_fin:
 
         fig_bar = px.bar(
             df_melt, x='Mes', y='Costo USD', color='Política', barmode='group',
-            color_discrete_map={'Factura 2024': '#EF553B', 'Factura 2025': '#636EFA', 'Facturacion Real': '#00CC96'},
+            color_discrete_map={'Factura 2024': '#EF553B', 'Factura 2026': '#636EFA', 'Facturacion Real': '#00CC96'},
             title="Evolución Mensual de Facturación",
             text_auto='.2s'
         )
@@ -359,6 +359,10 @@ with tab_ops:
     st.header("Análisis Operativo")
     
     if not df_view.empty:
+        # Prepare data for plotting (convert Period to String) - MOVED UP
+        df_plot = df_view.copy()
+        df_plot['Mes'] = df_plot['Mes'].astype(str)
+
         # --- MÉTRICAS ANUALES (RESUMEN) ---
         total_sc_ops = df_view['SC Total'].sum()
         total_calls_ops = df_view['Llamadas Validas'].sum()
@@ -386,10 +390,6 @@ with tab_ops:
         st.plotly_chart(fig_total, use_container_width=True)
 
         col_o1, col_o2 = st.columns(2)
-        
-        # Prepare data for plotting (convert Period to String)
-        df_plot = df_view.copy()
-        df_plot['Mes'] = df_plot['Mes'].astype(str)
         
         with col_o1:
             st.subheader("Servicios Concluidos (App vs Voz)")
@@ -427,8 +427,7 @@ with tab_data:
     
     if not df_view.empty:
         # Calcular Totales Anuales por País
-        df_view['Total Anual 2024'] = df_view.groupby('Pais')['Factura 2024'].transform('sum')
-        df_view['Total Anual 2025'] = df_view.groupby('Pais')['Factura 2025'].transform('sum')
-        
-        with st.expander("Ver Datos Detallados"):
-            st.dataframe(df_view)
+                df_view['Total Anual 2024'] = df_view.groupby('Pais')['Factura 2024'].transform('sum')
+                df_view['Total Anual 2026'] = df_view.groupby('Pais')['Factura 2026'].transform('sum')                
+                with st.expander("Ver Datos Detallados"):
+                    st.dataframe(df_view)
