@@ -112,6 +112,7 @@ selected_year = st.sidebar.selectbox(
 # --- LÓGICA DE CÁLCULO ---
 @st.cache_data
 def run_simulation(discount_val, fee_val, year_filter, acc_filter):
+    # Cache invalidation trigger: v2026.1
     report = GlobalPolicyReport(app_discount_pct=discount_val, app_fee=fee_val)
     
     all_results = []
