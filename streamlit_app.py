@@ -303,6 +303,30 @@ elif selected_country == "Dominicana":
             df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
     except Exception as e:
         st.error(f"Error cargando facturación real: {e}")
+elif selected_country == "Bolivia":
+    try:
+        real_bill_path = os.path.join(base_dir, "Facturacion", "facturacion_real_bo.csv")
+        if os.path.exists(real_bill_path):
+            df_real = pd.read_csv(real_bill_path)
+            df_real['Mes'] = df_real['Mes'].astype(str)
+            
+            df_view['Mes'] = df_view['Mes'].astype(str)
+            df_view = pd.merge(df_view, df_real, on='Mes', how='left')
+            df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
+    except Exception as e:
+        st.error(f"Error cargando facturación real: {e}")
+elif selected_country == "Peru":
+    try:
+        real_bill_path = os.path.join(base_dir, "Facturacion", "facturacion_real_pe.csv")
+        if os.path.exists(real_bill_path):
+            df_real = pd.read_csv(real_bill_path)
+            df_real['Mes'] = df_real['Mes'].astype(str)
+            
+            df_view['Mes'] = df_view['Mes'].astype(str)
+            df_view = pd.merge(df_view, df_real, on='Mes', how='left')
+            df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
+    except Exception as e:
+        st.error(f"Error cargando facturación real: {e}")
 
 # --- TABS PRINCIPALES ---
 tab_fin, tab_ops, tab_data = st.tabs(["💰 Financiero", "📈 Operativo", "📋 Datos Detallados"])
