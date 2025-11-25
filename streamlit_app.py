@@ -45,6 +45,15 @@ app_fee = st.sidebar.number_input(
     step=0.05
 )
 
+# --- Selector de Fee Mensual ---
+include_base_fee_option = st.sidebar.radio(
+    "Incluir Fee Mensual ($3,150 USD)",
+    options=["Sí", "No"],
+    index=0 # 'Sí' por defecto
+)
+
+base_fee_to_use = 3150.0 if include_base_fee_option == "Sí" else 0.0
+
 # Filtro de País y Año
 # Use absolute path relative to the script location (now root)
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -111,9 +120,9 @@ selected_year = st.sidebar.selectbox(
 
 # --- LÓGICA DE CÁLCULO ---
 @st.cache_data
-def run_simulation(discount_val, fee_val, year_filter, acc_filter):
+def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_param):
     # Cache invalidation trigger: v2026.1
-    report = GlobalPolicyReport(app_discount_pct=discount_val, app_fee=fee_val)
+    report = GlobalPolicyReport(app_discount_pct=discount_val, app_fee=fee_val, base_fee=base_fee_param)
     
     all_results = []
     
@@ -242,18 +251,39 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter):
     return pd.DataFrame(all_results)
 
 # Ejecutar simulación
-df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter)
+df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter, base_fee_to_use)
 
-# --- FILTRO DE MESES (Sidebar) ---
-# Ahora que df existe, podemos obtener los meses
+# --- FILTRO DE MESES (Mejorado - Botones de Acción) ---
 all_months = sorted(df['Mes'].unique().tolist()) if not df.empty else []
 
-with st.sidebar.expander("📅 Filtrar Meses", expanded=False):
+with st.sidebar.expander("📅 Filtrar Meses", expanded=True):
+    # Botones para control rápido
+    col1, col2 = st.columns(2)
+    
+    # Inicializar estado si no existe
+    if 'months_selected' not in st.session_state:
+        st.session_state.months_selected = all_months
+
+    if col1.button("Ver Todos"):
+        st.session_state.months_selected = all_months
+    
+    if col2.button("Limpiar"):
+        st.session_state.months_selected = []
+
+    # Multiselect vinculado al estado
     selected_months = st.multiselect(
-        "Selecciona los meses:",
+        "Selecciona:",
         options=all_months,
-        default=all_months
+        default=all_months,
+        key="months_selected"
     )
+
+    if not selected_months:
+        st.warning("⚠️ Selecciona al menos un mes.")
+
+# Asegurar que selected_months siempre sea una lista para el filtro
+if not selected_months: 
+    selected_months = []
 
 # --- FILTRADO ---
 if selected_country != "Todos (Global)":
@@ -339,6 +369,48 @@ elif selected_country == "Chile":
             df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
     except Exception as e:
         st.error(f"Error cargando facturación real: {e}")
+elif selected_country == "Mexico":
+    try:
+        real_bill_path = os.path.join(base_dir, "Facturacion", "facturacion_real_mx.csv")
+        if os.path.exists(real_bill_path):
+            df_real = pd.read_csv(real_bill_path)
+            df_real['Mes'] = df_real['Mes'].astype(str)
+            
+            df_view['Mes'] = df_view['Mes'].astype(str)
+            df_view = pd.merge(df_view, df_real, on='Mes', how='left')
+            df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
+    except Exception as e:
+        st.error(f"Error cargando facturación real: {e}")
+elif selected_country == "Ecuador":
+    try:
+        real_bill_path = os.path.join(base_dir, "Facturacion", "facturacion_real_ec.csv")
+        if os.path.exists(real_bill_path):
+            df_real = pd.read_csv(real_bill_path)
+            df_real['Mes'] = df_real['Mes'].astype(str)
+            
+            df_view['Mes'] = df_view['Mes'].astype(str)
+            df_view = pd.merge(df_view, df_real, on='Mes', how='left')
+            df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
+    except Exception as e:
+        st.error(f"Error cargando facturación real: {e}")
+elif selected_country == "Costa Rica":
+    try:
+        real_bill_path = os.path.join(base_dir, "Facturacion", "facturacion_real_cr.csv")
+        if os.path.exists(real_bill_path):
+            df_real = pd.read_csv(real_bill_path)
+            df_real['Mes'] = df_real['Mes'].astype(str)
+            
+            df_view['Mes'] = df_view['Mes'].astype(str)
+            df_view = pd.merge(df_view, df_real, on='Mes', how='left')
+            df_view['Facturacion Real'] = df_view['Facturacion Real'].fillna(0)
+    except Exception as e:
+        st.error(f"Error cargando facturación real: {e}")
+
+# --- AJUSTE DE FEE EN FACTURACIÓN REAL ---
+if include_base_fee_option == "No" and 'Facturacion Real' in df_view.columns:
+    # Restar el fee base (3150) de la facturación real para comparar "peras con peras"
+    # Solo restamos si el valor es mayor que el fee (para evitar negativos raros en meses sin facturación)
+    df_view['Facturacion Real'] = df_view['Facturacion Real'].apply(lambda x: max(0, x - 3150) if x > 0 else 0)
 
 # --- TABS PRINCIPALES ---
 tab_fin, tab_ops, tab_data = st.tabs(["💰 Financiero", "📈 Operativo", "📋 Datos Detallados"])

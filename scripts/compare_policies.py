@@ -4,12 +4,13 @@ import os
 import sys
 
 class GlobalPolicyReport:
-    def __init__(self, app_discount_pct=10, app_fee=0.45):
+    def __init__(self, app_discount_pct=10, app_fee=0.45, base_fee=None):
         # Shared Pricing
-        self.base_fee = 3150.00
         self.app_discount_pct = app_discount_pct
         self.app_fee = app_fee
-        
+        self.base_fee = base_fee if base_fee is not None else 3150.0 # Make base_fee configurable
+
+        # Tiers for SC costs (2024 & 2025)
         self.tiers_sc = [
             (50, 0.00), (500, 10.51), (1000, 9.28), (2000, 8.04),
             (3000, 6.80), (6000, 5.57), (9000, 5.26), (12000, 4.95),
