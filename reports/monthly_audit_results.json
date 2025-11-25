@@ -1,0 +1,1487 @@
+{
+    "Puerto Rico": {
+        "2025-01": {
+            "sc_total": 31036,
+            "sc_app": 7623,
+            "sc_voice": 23413,
+            "lv_total": 67757,
+            "cp": 8852,
+            "cm": 2407,
+            "adoption_pct": 24.561799200927954
+        },
+        "2025-02": {
+            "sc_total": 28067,
+            "sc_app": 7369,
+            "sc_voice": 20698,
+            "lv_total": 67446,
+            "cp": 8499,
+            "cm": 2042,
+            "adoption_pct": 26.255032600562938
+        },
+        "2025-03": {
+            "sc_total": 34299,
+            "sc_app": 8687,
+            "sc_voice": 25612,
+            "lv_total": 67223,
+            "cp": 8892,
+            "cm": 2646,
+            "adoption_pct": 25.327269016589405
+        },
+        "2025-04": {
+            "sc_total": 34268,
+            "sc_app": 9009,
+            "sc_voice": 25259,
+            "lv_total": 48919,
+            "cp": 9557,
+            "cm": 2821,
+            "adoption_pct": 26.289833080424884
+        },
+        "2025-05": {
+            "sc_total": 34606,
+            "sc_app": 9534,
+            "sc_voice": 25072,
+            "lv_total": 76916,
+            "cp": 9719,
+            "cm": 3260,
+            "adoption_pct": 27.550135814598626
+        },
+        "2025-06": {
+            "sc_total": 39987,
+            "sc_app": 13898,
+            "sc_voice": 26089,
+            "lv_total": 76273,
+            "cp": 9027,
+            "cm": 3184,
+            "adoption_pct": 34.75629579613375
+        },
+        "2025-07": {
+            "sc_total": 43393,
+            "sc_app": 16300,
+            "sc_voice": 27093,
+            "lv_total": 82777,
+            "cp": 8001,
+            "cm": 3297,
+            "adoption_pct": 37.56366234185237
+        },
+        "2025-08": {
+            "sc_total": 43027,
+            "sc_app": 15787,
+            "sc_voice": 27240,
+            "lv_total": 80876,
+            "cp": 7672,
+            "cm": 3054,
+            "adoption_pct": 36.69091500685616
+        },
+        "2025-09": {
+            "sc_total": 47068,
+            "sc_app": 16906,
+            "sc_voice": 30162,
+            "lv_total": 90576,
+            "cp": 8468,
+            "cm": 3009,
+            "adoption_pct": 35.9182459420413
+        },
+        "2025-10": {
+            "sc_total": 30425,
+            "sc_app": 10799,
+            "sc_voice": 19626,
+            "lv_total": 56535,
+            "cp": 5586,
+            "cm": 3019,
+            "adoption_pct": 35.493837304847986
+        }
+    },
+    "Dominicana": {
+        "2025-01": {
+            "sc_total": 2537,
+            "sc_app": 1752,
+            "sc_voice": 785,
+            "lv_total": 17304,
+            "cp": 535,
+            "cm": 657,
+            "adoption_pct": 69.05794245171462
+        },
+        "2025-02": {
+            "sc_total": 2319,
+            "sc_app": 1554,
+            "sc_voice": 765,
+            "lv_total": 18085,
+            "cp": 396,
+            "cm": 619,
+            "adoption_pct": 67.01164294954722
+        },
+        "2025-03": {
+            "sc_total": 2631,
+            "sc_app": 1875,
+            "sc_voice": 756,
+            "lv_total": 18740,
+            "cp": 479,
+            "cm": 745,
+            "adoption_pct": 71.26567844925884
+        },
+        "2025-04": {
+            "sc_total": 2239,
+            "sc_app": 1443,
+            "sc_voice": 796,
+            "lv_total": 17623,
+            "cp": 453,
+            "cm": 689,
+            "adoption_pct": 64.44841447074587
+        },
+        "2025-05": {
+            "sc_total": 2486,
+            "sc_app": 1662,
+            "sc_voice": 824,
+            "lv_total": 19759,
+            "cp": 461,
+            "cm": 837,
+            "adoption_pct": 66.8543845534996
+        },
+        "2025-06": {
+            "sc_total": 2246,
+            "sc_app": 1584,
+            "sc_voice": 662,
+            "lv_total": 16652,
+            "cp": 437,
+            "cm": 791,
+            "adoption_pct": 70.5253784505788
+        },
+        "2025-07": {
+            "sc_total": 2401,
+            "sc_app": 1709,
+            "sc_voice": 692,
+            "lv_total": 17752,
+            "cp": 400,
+            "cm": 846,
+            "adoption_pct": 71.1786755518534
+        },
+        "2025-08": {
+            "sc_total": 2368,
+            "sc_app": 1636,
+            "sc_voice": 732,
+            "lv_total": 16480,
+            "cp": 383,
+            "cm": 783,
+            "adoption_pct": 69.08783783783784
+        },
+        "2025-09": {
+            "sc_total": 2518,
+            "sc_app": 1869,
+            "sc_voice": 649,
+            "lv_total": 17402,
+            "cp": 475,
+            "cm": 819,
+            "adoption_pct": 74.22557585385226
+        },
+        "2025-10": {
+            "sc_total": 2035,
+            "sc_app": 1544,
+            "sc_voice": 491,
+            "lv_total": 12819,
+            "cp": 359,
+            "cm": 661,
+            "adoption_pct": 75.87223587223588
+        }
+    },
+    "Salvador": {
+        "2025-01": {
+            "sc_total": 21,
+            "sc_app": 0,
+            "sc_voice": 21,
+            "lv_total": 34,
+            "cp": 0,
+            "cm": 3,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 19,
+            "sc_app": 0,
+            "sc_voice": 19,
+            "lv_total": 0,
+            "cp": 5,
+            "cm": 9,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 21,
+            "sc_app": 0,
+            "sc_voice": 21,
+            "lv_total": 0,
+            "cp": 3,
+            "cm": 8,
+            "adoption_pct": 0.0
+        },
+        "2025-04": {
+            "sc_total": 21,
+            "sc_app": 0,
+            "sc_voice": 21,
+            "lv_total": 0,
+            "cp": 4,
+            "cm": 11,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 13,
+            "sc_app": 0,
+            "sc_voice": 13,
+            "lv_total": 0,
+            "cp": 2,
+            "cm": 4,
+            "adoption_pct": 0.0
+        },
+        "2025-06": {
+            "sc_total": 21,
+            "sc_app": 2,
+            "sc_voice": 19,
+            "lv_total": 0,
+            "cp": 4,
+            "cm": 7,
+            "adoption_pct": 9.523809523809524
+        },
+        "2025-07": {
+            "sc_total": 27,
+            "sc_app": 3,
+            "sc_voice": 24,
+            "lv_total": 0,
+            "cp": 9,
+            "cm": 11,
+            "adoption_pct": 11.11111111111111
+        },
+        "2025-08": {
+            "sc_total": 24,
+            "sc_app": 0,
+            "sc_voice": 24,
+            "lv_total": 0,
+            "cp": 8,
+            "cm": 11,
+            "adoption_pct": 0.0
+        },
+        "2025-09": {
+            "sc_total": 24,
+            "sc_app": 0,
+            "sc_voice": 24,
+            "lv_total": 0,
+            "cp": 8,
+            "cm": 6,
+            "adoption_pct": 0.0
+        },
+        "2025-10": {
+            "sc_total": 29,
+            "sc_app": 3,
+            "sc_voice": 26,
+            "lv_total": 65,
+            "cp": 20,
+            "cm": 51,
+            "adoption_pct": 10.344827586206897
+        }
+    },
+    "Mexico": {
+        "2025-01": {
+            "sc_total": 299,
+            "sc_app": 5,
+            "sc_voice": 294,
+            "lv_total": 1847,
+            "cp": 37,
+            "cm": 182,
+            "adoption_pct": 1.6722408026755853
+        },
+        "2025-02": {
+            "sc_total": 220,
+            "sc_app": 11,
+            "sc_voice": 209,
+            "lv_total": 1529,
+            "cp": 39,
+            "cm": 152,
+            "adoption_pct": 5.0
+        },
+        "2025-03": {
+            "sc_total": 274,
+            "sc_app": 2,
+            "sc_voice": 272,
+            "lv_total": 2323,
+            "cp": 96,
+            "cm": 254,
+            "adoption_pct": 0.7299270072992701
+        },
+        "2025-04": {
+            "sc_total": 213,
+            "sc_app": 7,
+            "sc_voice": 206,
+            "lv_total": 1903,
+            "cp": 76,
+            "cm": 175,
+            "adoption_pct": 3.286384976525822
+        },
+        "2025-05": {
+            "sc_total": 233,
+            "sc_app": 6,
+            "sc_voice": 227,
+            "lv_total": 1869,
+            "cp": 82,
+            "cm": 207,
+            "adoption_pct": 2.575107296137339
+        },
+        "2025-06": {
+            "sc_total": 246,
+            "sc_app": 3,
+            "sc_voice": 243,
+            "lv_total": 1949,
+            "cp": 51,
+            "cm": 218,
+            "adoption_pct": 1.2195121951219512
+        },
+        "2025-07": {
+            "sc_total": 258,
+            "sc_app": 6,
+            "sc_voice": 252,
+            "lv_total": 1720,
+            "cp": 38,
+            "cm": 164,
+            "adoption_pct": 2.3255813953488373
+        },
+        "2025-08": {
+            "sc_total": 267,
+            "sc_app": 4,
+            "sc_voice": 263,
+            "lv_total": 2285,
+            "cp": 54,
+            "cm": 189,
+            "adoption_pct": 1.4981273408239701
+        },
+        "2025-09": {
+            "sc_total": 278,
+            "sc_app": 5,
+            "sc_voice": 273,
+            "lv_total": 2610,
+            "cp": 56,
+            "cm": 198,
+            "adoption_pct": 1.7985611510791366
+        },
+        "2025-10": {
+            "sc_total": 161,
+            "sc_app": 4,
+            "sc_voice": 157,
+            "lv_total": 970,
+            "cp": 43,
+            "cm": 117,
+            "adoption_pct": 2.484472049689441
+        }
+    },
+    "Argentina": {
+        "2025-01": {
+            "sc_total": 1414,
+            "sc_app": 169,
+            "sc_voice": 1245,
+            "lv_total": 7006,
+            "cp": 116,
+            "cm": 661,
+            "adoption_pct": 11.951909476661953
+        },
+        "2025-02": {
+            "sc_total": 1359,
+            "sc_app": 153,
+            "sc_voice": 1206,
+            "lv_total": 6029,
+            "cp": 117,
+            "cm": 749,
+            "adoption_pct": 11.258278145695364
+        },
+        "2025-03": {
+            "sc_total": 1592,
+            "sc_app": 175,
+            "sc_voice": 1417,
+            "lv_total": 6463,
+            "cp": 162,
+            "cm": 870,
+            "adoption_pct": 10.992462311557789
+        },
+        "2025-04": {
+            "sc_total": 1593,
+            "sc_app": 193,
+            "sc_voice": 1400,
+            "lv_total": 6361,
+            "cp": 116,
+            "cm": 544,
+            "adoption_pct": 12.115505335844318
+        },
+        "2025-05": {
+            "sc_total": 1819,
+            "sc_app": 252,
+            "sc_voice": 1567,
+            "lv_total": 6273,
+            "cp": 83,
+            "cm": 425,
+            "adoption_pct": 13.853765805387575
+        },
+        "2025-06": {
+            "sc_total": 1807,
+            "sc_app": 299,
+            "sc_voice": 1508,
+            "lv_total": 5971,
+            "cp": 146,
+            "cm": 477,
+            "adoption_pct": 16.546762589928058
+        },
+        "2025-07": {
+            "sc_total": 1966,
+            "sc_app": 353,
+            "sc_voice": 1613,
+            "lv_total": 6963,
+            "cp": 175,
+            "cm": 439,
+            "adoption_pct": 17.955239064089522
+        },
+        "2025-08": {
+            "sc_total": 1811,
+            "sc_app": 204,
+            "sc_voice": 1607,
+            "lv_total": 7506,
+            "cp": 87,
+            "cm": 616,
+            "adoption_pct": 11.264494754279404
+        },
+        "2025-09": {
+            "sc_total": 2021,
+            "sc_app": 242,
+            "sc_voice": 1779,
+            "lv_total": 8704,
+            "cp": 140,
+            "cm": 730,
+            "adoption_pct": 11.974270163285503
+        },
+        "2025-10": {
+            "sc_total": 1871,
+            "sc_app": 250,
+            "sc_voice": 1621,
+            "lv_total": 7614,
+            "cp": 171,
+            "cm": 789,
+            "adoption_pct": 13.361838588989844
+        }
+    },
+    "Egipto": {
+        "2025-01": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 14,
+            "cm": 25,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 19,
+            "cm": 22,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 22,
+            "cm": 34,
+            "adoption_pct": 0.0
+        },
+        "2025-04": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 2,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 8,
+            "cm": 4,
+            "adoption_pct": 0.0
+        },
+        "2025-07": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 17,
+            "cm": 31,
+            "adoption_pct": 0.0
+        },
+        "2025-08": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 24,
+            "cm": 42,
+            "adoption_pct": 0.0
+        },
+        "2025-09": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 40,
+            "adoption_pct": 0.0
+        },
+        "2025-10": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 31,
+            "adoption_pct": 0.0
+        }
+    },
+    "Costa Rica": {
+        "2025-01": {
+            "sc_total": 3636,
+            "sc_app": 1832,
+            "sc_voice": 1804,
+            "lv_total": 13451,
+            "cp": 675,
+            "cm": 1454,
+            "adoption_pct": 50.38503850385039
+        },
+        "2025-02": {
+            "sc_total": 3084,
+            "sc_app": 1372,
+            "sc_voice": 1712,
+            "lv_total": 10620,
+            "cp": 446,
+            "cm": 1098,
+            "adoption_pct": 44.487678339818416
+        },
+        "2025-03": {
+            "sc_total": 3381,
+            "sc_app": 1435,
+            "sc_voice": 1946,
+            "lv_total": 11975,
+            "cp": 504,
+            "cm": 1160,
+            "adoption_pct": 42.44306418219462
+        },
+        "2025-04": {
+            "sc_total": 3562,
+            "sc_app": 1205,
+            "sc_voice": 2357,
+            "lv_total": 10854,
+            "cp": 468,
+            "cm": 948,
+            "adoption_pct": 33.82930937675464
+        },
+        "2025-05": {
+            "sc_total": 3710,
+            "sc_app": 1357,
+            "sc_voice": 2353,
+            "lv_total": 12488,
+            "cp": 662,
+            "cm": 1106,
+            "adoption_pct": 36.57681940700809
+        },
+        "2025-06": {
+            "sc_total": 4749,
+            "sc_app": 1670,
+            "sc_voice": 3079,
+            "lv_total": 12879,
+            "cp": 1097,
+            "cm": 981,
+            "adoption_pct": 35.16529795746473
+        },
+        "2025-07": {
+            "sc_total": 4207,
+            "sc_app": 1623,
+            "sc_voice": 2584,
+            "lv_total": 14699,
+            "cp": 1213,
+            "cm": 1012,
+            "adoption_pct": 38.57855954361778
+        },
+        "2025-08": {
+            "sc_total": 4611,
+            "sc_app": 1564,
+            "sc_voice": 3047,
+            "lv_total": 20374,
+            "cp": 1369,
+            "cm": 1055,
+            "adoption_pct": 33.91888961179787
+        },
+        "2025-09": {
+            "sc_total": 6528,
+            "sc_app": 2173,
+            "sc_voice": 4355,
+            "lv_total": 29799,
+            "cp": 1381,
+            "cm": 1018,
+            "adoption_pct": 33.287377450980394
+        },
+        "2025-10": {
+            "sc_total": 5032,
+            "sc_app": 1624,
+            "sc_voice": 3408,
+            "lv_total": 19548,
+            "cp": 904,
+            "cm": 997,
+            "adoption_pct": 32.273449920508746
+        }
+    },
+    "Ecuador": {
+        "2025-01": {
+            "sc_total": 454,
+            "sc_app": 3,
+            "sc_voice": 451,
+            "lv_total": 1311,
+            "cp": 50,
+            "cm": 83,
+            "adoption_pct": 0.6607929515418502
+        },
+        "2025-02": {
+            "sc_total": 430,
+            "sc_app": 7,
+            "sc_voice": 423,
+            "lv_total": 1026,
+            "cp": 58,
+            "cm": 76,
+            "adoption_pct": 1.627906976744186
+        },
+        "2025-03": {
+            "sc_total": 404,
+            "sc_app": 1,
+            "sc_voice": 403,
+            "lv_total": 880,
+            "cp": 48,
+            "cm": 83,
+            "adoption_pct": 0.24752475247524752
+        },
+        "2025-04": {
+            "sc_total": 482,
+            "sc_app": 1,
+            "sc_voice": 481,
+            "lv_total": 1368,
+            "cp": 41,
+            "cm": 87,
+            "adoption_pct": 0.2074688796680498
+        },
+        "2025-05": {
+            "sc_total": 469,
+            "sc_app": 2,
+            "sc_voice": 467,
+            "lv_total": 1837,
+            "cp": 72,
+            "cm": 96,
+            "adoption_pct": 0.42643923240938164
+        },
+        "2025-06": {
+            "sc_total": 444,
+            "sc_app": 4,
+            "sc_voice": 440,
+            "lv_total": 1822,
+            "cp": 55,
+            "cm": 125,
+            "adoption_pct": 0.9009009009009009
+        },
+        "2025-07": {
+            "sc_total": 505,
+            "sc_app": 7,
+            "sc_voice": 498,
+            "lv_total": 2176,
+            "cp": 70,
+            "cm": 137,
+            "adoption_pct": 1.3861386138613863
+        },
+        "2025-08": {
+            "sc_total": 558,
+            "sc_app": 3,
+            "sc_voice": 555,
+            "lv_total": 2603,
+            "cp": 92,
+            "cm": 134,
+            "adoption_pct": 0.5376344086021506
+        },
+        "2025-09": {
+            "sc_total": 579,
+            "sc_app": 8,
+            "sc_voice": 571,
+            "lv_total": 2021,
+            "cp": 88,
+            "cm": 150,
+            "adoption_pct": 1.381692573402418
+        },
+        "2025-10": {
+            "sc_total": 408,
+            "sc_app": 22,
+            "sc_voice": 386,
+            "lv_total": 1306,
+            "cp": 49,
+            "cm": 97,
+            "adoption_pct": 5.392156862745098
+        }
+    },
+    "Chile": {
+        "2025-01": {
+            "sc_total": 714,
+            "sc_app": 33,
+            "sc_voice": 681,
+            "lv_total": 4850,
+            "cp": 561,
+            "cm": 689,
+            "adoption_pct": 4.621848739495799
+        },
+        "2025-02": {
+            "sc_total": 591,
+            "sc_app": 32,
+            "sc_voice": 559,
+            "lv_total": 3500,
+            "cp": 486,
+            "cm": 625,
+            "adoption_pct": 5.414551607445008
+        },
+        "2025-03": {
+            "sc_total": 615,
+            "sc_app": 27,
+            "sc_voice": 588,
+            "lv_total": 3427,
+            "cp": 418,
+            "cm": 614,
+            "adoption_pct": 4.390243902439024
+        },
+        "2025-04": {
+            "sc_total": 488,
+            "sc_app": 22,
+            "sc_voice": 466,
+            "lv_total": 2804,
+            "cp": 422,
+            "cm": 593,
+            "adoption_pct": 4.508196721311475
+        },
+        "2025-05": {
+            "sc_total": 511,
+            "sc_app": 36,
+            "sc_voice": 475,
+            "lv_total": 2732,
+            "cp": 415,
+            "cm": 556,
+            "adoption_pct": 7.045009784735812
+        },
+        "2025-06": {
+            "sc_total": 542,
+            "sc_app": 38,
+            "sc_voice": 504,
+            "lv_total": 3068,
+            "cp": 419,
+            "cm": 729,
+            "adoption_pct": 7.011070110701106
+        },
+        "2025-07": {
+            "sc_total": 594,
+            "sc_app": 62,
+            "sc_voice": 532,
+            "lv_total": 4228,
+            "cp": 477,
+            "cm": 775,
+            "adoption_pct": 10.437710437710438
+        },
+        "2025-08": {
+            "sc_total": 539,
+            "sc_app": 14,
+            "sc_voice": 525,
+            "lv_total": 3930,
+            "cp": 415,
+            "cm": 542,
+            "adoption_pct": 2.5974025974025974
+        },
+        "2025-09": {
+            "sc_total": 578,
+            "sc_app": 30,
+            "sc_voice": 548,
+            "lv_total": 3481,
+            "cp": 451,
+            "cm": 382,
+            "adoption_pct": 5.190311418685121
+        },
+        "2025-10": {
+            "sc_total": 441,
+            "sc_app": 21,
+            "sc_voice": 420,
+            "lv_total": 2532,
+            "cp": 320,
+            "cm": 346,
+            "adoption_pct": 4.761904761904762
+        }
+    },
+    "Uruguay": {
+        "2025-01": {
+            "sc_total": 671,
+            "sc_app": 292,
+            "sc_voice": 379,
+            "lv_total": 4511,
+            "cp": 59,
+            "cm": 251,
+            "adoption_pct": 43.51713859910581
+        },
+        "2025-02": {
+            "sc_total": 636,
+            "sc_app": 309,
+            "sc_voice": 327,
+            "lv_total": 4031,
+            "cp": 62,
+            "cm": 236,
+            "adoption_pct": 48.58490566037736
+        },
+        "2025-03": {
+            "sc_total": 690,
+            "sc_app": 326,
+            "sc_voice": 364,
+            "lv_total": 3903,
+            "cp": 80,
+            "cm": 272,
+            "adoption_pct": 47.2463768115942
+        },
+        "2025-04": {
+            "sc_total": 664,
+            "sc_app": 297,
+            "sc_voice": 367,
+            "lv_total": 3972,
+            "cp": 73,
+            "cm": 234,
+            "adoption_pct": 44.72891566265061
+        },
+        "2025-05": {
+            "sc_total": 644,
+            "sc_app": 287,
+            "sc_voice": 357,
+            "lv_total": 3783,
+            "cp": 67,
+            "cm": 228,
+            "adoption_pct": 44.565217391304344
+        },
+        "2025-06": {
+            "sc_total": 696,
+            "sc_app": 282,
+            "sc_voice": 414,
+            "lv_total": 3484,
+            "cp": 74,
+            "cm": 239,
+            "adoption_pct": 40.51724137931034
+        },
+        "2025-07": {
+            "sc_total": 741,
+            "sc_app": 270,
+            "sc_voice": 471,
+            "lv_total": 3746,
+            "cp": 52,
+            "cm": 252,
+            "adoption_pct": 36.43724696356275
+        },
+        "2025-08": {
+            "sc_total": 662,
+            "sc_app": 305,
+            "sc_voice": 357,
+            "lv_total": 3931,
+            "cp": 50,
+            "cm": 228,
+            "adoption_pct": 46.07250755287009
+        },
+        "2025-09": {
+            "sc_total": 741,
+            "sc_app": 331,
+            "sc_voice": 410,
+            "lv_total": 3758,
+            "cp": 47,
+            "cm": 207,
+            "adoption_pct": 44.6693657219973
+        },
+        "2025-10": {
+            "sc_total": 547,
+            "sc_app": 227,
+            "sc_voice": 320,
+            "lv_total": 3255,
+            "cp": 50,
+            "cm": 216,
+            "adoption_pct": 41.49908592321755
+        }
+    },
+    "Bolivia": {
+        "2025-01": {
+            "sc_total": 1708,
+            "sc_app": 461,
+            "sc_voice": 1247,
+            "lv_total": 6221,
+            "cp": 287,
+            "cm": 214,
+            "adoption_pct": 26.990632318501174
+        },
+        "2025-02": {
+            "sc_total": 1597,
+            "sc_app": 426,
+            "sc_voice": 1171,
+            "lv_total": 5673,
+            "cp": 229,
+            "cm": 178,
+            "adoption_pct": 26.67501565435191
+        },
+        "2025-03": {
+            "sc_total": 1558,
+            "sc_app": 397,
+            "sc_voice": 1161,
+            "lv_total": 5168,
+            "cp": 209,
+            "cm": 178,
+            "adoption_pct": 25.481386392811295
+        },
+        "2025-04": {
+            "sc_total": 1445,
+            "sc_app": 295,
+            "sc_voice": 1150,
+            "lv_total": 4995,
+            "cp": 285,
+            "cm": 158,
+            "adoption_pct": 20.415224913494807
+        },
+        "2025-05": {
+            "sc_total": 1519,
+            "sc_app": 264,
+            "sc_voice": 1255,
+            "lv_total": 5281,
+            "cp": 287,
+            "cm": 138,
+            "adoption_pct": 17.3798551678736
+        },
+        "2025-06": {
+            "sc_total": 1325,
+            "sc_app": 229,
+            "sc_voice": 1096,
+            "lv_total": 4653,
+            "cp": 254,
+            "cm": 160,
+            "adoption_pct": 17.28301886792453
+        },
+        "2025-07": {
+            "sc_total": 1152,
+            "sc_app": 221,
+            "sc_voice": 931,
+            "lv_total": 4464,
+            "cp": 308,
+            "cm": 154,
+            "adoption_pct": 19.18402777777778
+        },
+        "2025-08": {
+            "sc_total": 924,
+            "sc_app": 176,
+            "sc_voice": 748,
+            "lv_total": 2568,
+            "cp": 216,
+            "cm": 105,
+            "adoption_pct": 19.047619047619047
+        },
+        "2025-09": {
+            "sc_total": 1009,
+            "sc_app": 251,
+            "sc_voice": 758,
+            "lv_total": 3106,
+            "cp": 311,
+            "cm": 129,
+            "adoption_pct": 24.87611496531219
+        },
+        "2025-10": {
+            "sc_total": 811,
+            "sc_app": 217,
+            "sc_voice": 594,
+            "lv_total": 2657,
+            "cp": 204,
+            "cm": 107,
+            "adoption_pct": 26.75709001233046
+        }
+    },
+    "Guatemala": {
+        "2025-01": {
+            "sc_total": 17131,
+            "sc_app": 8189,
+            "sc_voice": 8942,
+            "lv_total": 2660,
+            "cp": 3634,
+            "cm": 1527,
+            "adoption_pct": 47.802229875664
+        },
+        "2025-02": {
+            "sc_total": 15990,
+            "sc_app": 7757,
+            "sc_voice": 8233,
+            "lv_total": 3912,
+            "cp": 3717,
+            "cm": 1451,
+            "adoption_pct": 48.51156973108193
+        },
+        "2025-03": {
+            "sc_total": 19977,
+            "sc_app": 7865,
+            "sc_voice": 12112,
+            "lv_total": 3986,
+            "cp": 4002,
+            "cm": 1632,
+            "adoption_pct": 39.37027581718977
+        },
+        "2025-04": {
+            "sc_total": 18957,
+            "sc_app": 7535,
+            "sc_voice": 11422,
+            "lv_total": 3974,
+            "cp": 3648,
+            "cm": 1559,
+            "adoption_pct": 39.74785039826977
+        },
+        "2025-05": {
+            "sc_total": 19593,
+            "sc_app": 8033,
+            "sc_voice": 11560,
+            "lv_total": 6997,
+            "cp": 3848,
+            "cm": 1667,
+            "adoption_pct": 40.999336497728784
+        },
+        "2025-06": {
+            "sc_total": 20146,
+            "sc_app": 8756,
+            "sc_voice": 11390,
+            "lv_total": 11594,
+            "cp": 6027,
+            "cm": 1785,
+            "adoption_pct": 43.462722128462225
+        },
+        "2025-07": {
+            "sc_total": 23213,
+            "sc_app": 10344,
+            "sc_voice": 12869,
+            "lv_total": 11641,
+            "cp": 6557,
+            "cm": 1890,
+            "adoption_pct": 44.56123723775471
+        },
+        "2025-08": {
+            "sc_total": 21614,
+            "sc_app": 8625,
+            "sc_voice": 12989,
+            "lv_total": 14655,
+            "cp": 5012,
+            "cm": 2457,
+            "adoption_pct": 39.90469140371981
+        },
+        "2025-09": {
+            "sc_total": 21513,
+            "sc_app": 6685,
+            "sc_voice": 14828,
+            "lv_total": 17649,
+            "cp": 4452,
+            "cm": 2937,
+            "adoption_pct": 31.07423418398178
+        },
+        "2025-10": {
+            "sc_total": 16413,
+            "sc_app": 6043,
+            "sc_voice": 10370,
+            "lv_total": 30626,
+            "cp": 3925,
+            "cm": 2494,
+            "adoption_pct": 36.81837567781637
+        }
+    },
+    "Peru": {
+        "2025-01": {
+            "sc_total": 186,
+            "sc_app": 0,
+            "sc_voice": 186,
+            "lv_total": 553,
+            "cp": 15,
+            "cm": 74,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 194,
+            "sc_app": 0,
+            "sc_voice": 194,
+            "lv_total": 313,
+            "cp": 12,
+            "cm": 68,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 169,
+            "sc_app": 0,
+            "sc_voice": 169,
+            "lv_total": 330,
+            "cp": 8,
+            "cm": 70,
+            "adoption_pct": 0.0
+        },
+        "2025-04": {
+            "sc_total": 197,
+            "sc_app": 0,
+            "sc_voice": 197,
+            "lv_total": 356,
+            "cp": 3,
+            "cm": 67,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 169,
+            "sc_app": 0,
+            "sc_voice": 169,
+            "lv_total": 335,
+            "cp": 23,
+            "cm": 52,
+            "adoption_pct": 0.0
+        },
+        "2025-06": {
+            "sc_total": 138,
+            "sc_app": 0,
+            "sc_voice": 138,
+            "lv_total": 171,
+            "cp": 17,
+            "cm": 45,
+            "adoption_pct": 0.0
+        },
+        "2025-07": {
+            "sc_total": 142,
+            "sc_app": 0,
+            "sc_voice": 142,
+            "lv_total": 313,
+            "cp": 17,
+            "cm": 48,
+            "adoption_pct": 0.0
+        },
+        "2025-08": {
+            "sc_total": 164,
+            "sc_app": 0,
+            "sc_voice": 164,
+            "lv_total": 426,
+            "cp": 16,
+            "cm": 52,
+            "adoption_pct": 0.0
+        },
+        "2025-09": {
+            "sc_total": 161,
+            "sc_app": 0,
+            "sc_voice": 161,
+            "lv_total": 225,
+            "cp": 11,
+            "cm": 58,
+            "adoption_pct": 0.0
+        },
+        "2025-10": {
+            "sc_total": 105,
+            "sc_app": 29,
+            "sc_voice": 76,
+            "lv_total": 144,
+            "cp": 9,
+            "cm": 51,
+            "adoption_pct": 27.61904761904762
+        }
+    },
+    "Paraguay": {
+        "2025-02": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 2,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-07": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 2,
+            "adoption_pct": 0.0
+        },
+        "2025-10": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 2,
+            "cm": 1,
+            "adoption_pct": 0.0
+        }
+    },
+    "Colombia": {
+        "2025-01": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 7,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 1,
+            "sc_app": 0,
+            "sc_voice": 1,
+            "lv_total": 1,
+            "cp": 3,
+            "cm": 1,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 2,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-04": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 1,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 1,
+            "adoption_pct": 0.0
+        },
+        "2025-06": {
+            "sc_total": 21,
+            "sc_app": 0,
+            "sc_voice": 21,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 4,
+            "adoption_pct": 0.0
+        },
+        "2025-07": {
+            "sc_total": 53,
+            "sc_app": 0,
+            "sc_voice": 53,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-08": {
+            "sc_total": 44,
+            "sc_app": 0,
+            "sc_voice": 44,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-09": {
+            "sc_total": 36,
+            "sc_app": 0,
+            "sc_voice": 36,
+            "lv_total": 0,
+            "cp": 58,
+            "cm": 20,
+            "adoption_pct": 0.0
+        },
+        "2025-10": {
+            "sc_total": 14,
+            "sc_app": 0,
+            "sc_voice": 14,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 0,
+            "adoption_pct": 0.0
+        }
+    },
+    "Honduras": {
+        "2025-01": {
+            "sc_total": 26,
+            "sc_app": 0,
+            "sc_voice": 26,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 4,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 10,
+            "sc_app": 0,
+            "sc_voice": 10,
+            "lv_total": 0,
+            "cp": 7,
+            "cm": 13,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 8,
+            "sc_app": 1,
+            "sc_voice": 7,
+            "lv_total": 0,
+            "cp": 3,
+            "cm": 9,
+            "adoption_pct": 12.5
+        },
+        "2025-04": {
+            "sc_total": 22,
+            "sc_app": 0,
+            "sc_voice": 22,
+            "lv_total": 0,
+            "cp": 6,
+            "cm": 7,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 28,
+            "sc_app": 10,
+            "sc_voice": 18,
+            "lv_total": 0,
+            "cp": 7,
+            "cm": 60,
+            "adoption_pct": 35.714285714285715
+        },
+        "2025-06": {
+            "sc_total": 8,
+            "sc_app": 1,
+            "sc_voice": 7,
+            "lv_total": 0,
+            "cp": 6,
+            "cm": 6,
+            "adoption_pct": 12.5
+        },
+        "2025-07": {
+            "sc_total": 3,
+            "sc_app": 3,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 1,
+            "adoption_pct": 100.0
+        },
+        "2025-08": {
+            "sc_total": 9,
+            "sc_app": 0,
+            "sc_voice": 9,
+            "lv_total": 0,
+            "cp": 3,
+            "cm": 2,
+            "adoption_pct": 0.0
+        },
+        "2025-09": {
+            "sc_total": 7,
+            "sc_app": 1,
+            "sc_voice": 6,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 2,
+            "adoption_pct": 14.285714285714285
+        },
+        "2025-10": {
+            "sc_total": 1,
+            "sc_app": 1,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 1,
+            "cm": 6,
+            "adoption_pct": 100.0
+        }
+    },
+    "Nicaragua": {
+        "2025-01": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 3,
+            "cm": 0,
+            "adoption_pct": 0.0
+        }
+    },
+    "Estados Unidos": {
+        "2025-01": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 31,
+            "cm": 8,
+            "adoption_pct": 0.0
+        },
+        "2025-02": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 15,
+            "cm": 2,
+            "adoption_pct": 0.0
+        },
+        "2025-03": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 25,
+            "cm": 28,
+            "adoption_pct": 0.0
+        },
+        "2025-04": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 27,
+            "cm": 9,
+            "adoption_pct": 0.0
+        },
+        "2025-05": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 46,
+            "cm": 7,
+            "adoption_pct": 0.0
+        },
+        "2025-07": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 0,
+            "cm": 0,
+            "adoption_pct": 0.0
+        },
+        "2025-08": {
+            "sc_total": 0,
+            "sc_app": 0,
+            "sc_voice": 0,
+            "lv_total": 0,
+            "cp": 6,
+            "cm": 7,
+            "adoption_pct": 0.0
+        }
+    }
+}

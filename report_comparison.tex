@@ -1,0 +1,455 @@
+\documentclass{article}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{longtable}
+\geometry{a4paper, margin=0.8in}
+
+\title{Reporte Global de Nueva Politica de Facturacion 2025}
+\author{Voccare - Analisis Financiero}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Definicion de la Nueva Calculadora (v2.1)}
+
+La nueva pol\'itica de facturaci\'on busca incentivar la adopci\'on digital y reflejar los costos reales de operaci\'on.
+
+\begin{itemize}
+    \item \textbf{Fee Mensual:} \$3,150 USD.
+    \item \textbf{Servicios Concluidos (SC):} Se suman todos los servicios (Voz + App) para determinar el Tier.
+    \item \textbf{Incentivo App:} Se aplica un \textbf{descuento del 10\%} sobre el costo proporcional de los SC originados por App.
+    \item \textbf{Transacci\'on Digital:} \$0.45 USD por servicio App exitoso.
+    \item \textbf{Llamadas V\'alidas:} Se cobran seg\'un ocurrencia real, ajustadas por un factor de eficiencia t\'ecnica por pa\'is.
+\end{itemize}
+
+\subsection*{Formulas de Calculo Exactas}
+
+Para una total transparencia, a continuacion se presentan las formulas exactas utilizadas para calcular la facturacion bajo ambas politicas:
+
+\textbf{Variables Clave:}
+\begin{itemize}
+    \item $F_{base}$: Fee Mensual ($3150 \text{ USD}$).
+    \item $C(Vol, Tiers, A)$: Funcion que calcula el costo para un volumen dado, aplicando una estructura de Tiers ($Tiers$) y un factor de ajuste de precios ($A$).
+    \item $V_{SC}$: Volumen Total de Servicios Concluidos (App + Voz).
+    \item $V_{APP}$: Volumen de Servicios Concluidos via App.
+    \item $R_{LV/SC}$: Ratio de Llamadas Validias por Servicio Concluido (ej. $1.02$ para Dominicana, $3.00$ para Puerto Rico).
+    \item $A$: Factor de Ajuste de Precios (normalmente $1.0$, se aplica para alinear con tarifas especificas de contrato).\
+    \item $D_{APP} = 0.10$: Descuento del 10\% para servicios App.
+\end{itemize}
+
+\textbf{1. Ecuacion para la Politica 2024 (Factura Antigua):}
+\[
+\text{Factura}_{2024} = (F_{base} \times A) + C(V_{SC}, T_{SC}, A) + C(V_{SC} \times R_{LV/SC}, T_{LV}, A)
+\]
+
+\textbf{2. Ecuacion para la Politica 2025 (Factura Nueva con Incentivo):}
+\begin{enumerate}
+    \item \textbf{Costo Base de SC:}
+    \[ Costo_{SC\_Base} = C(V_{SC}, T_{SC}, A) \]
+    \item \textbf{Descuento por Uso de App en SC:}
+    \[ Descuento_{SC\_App} = Costo_{SC\_Base} \times \left(\frac{V_{APP}}{V_{SC}}\right) \times D_{APP} \quad (\text{si } V_{SC} > 0 \text{, si no } 0) \]
+    \item \textbf{Costo Neto de SC (con Descuento):}
+    \[ Costo_{SC\_Neto} = Costo_{SC\_Base} - Descuento_{SC\_App} \]
+\end{enumerate}
+La factura total de 2025 es:
+\[
+\text{Factura}_{2025} = (F_{base} \times A) + Costo_{SC\_Neto} + C(V_{SC} \times R_{LV/SC}, T_{LV}, A) + C(V_{APP}, T_{APP}, A)
+\]
+
+\section{Resumen Ejecutivo Global}
+
+\begin{table}[h]
+\centering
+\begin{tabular}{lrrr}
+\toprule
+\textbf{Pais} & \textbf{Total 2024 (USD)} & \textbf{Total 2025 (USD)} & \textbf{Ahorro Total} \\
+\midrule
+Puerto Rico 20251027.csv & \$1,979,797 & \$1,968,807 & \$10,990 \\nGuatemala 20251027.csv & \$1,187,729 & \$1,177,643 & \$10,085 \\nCosta Rica 20251027.csv & \$383,843 & \$379,295 & \$4,548 \\nDominicana 20251027.csv & \$259,833 & \$253,343 & \$6,489 \\nArgentina 20251027.csv & \$204,184 & \$203,199 & \$985 \\nBolivia 20251027.csv & \$165,028 & \$163,698 & \$1,330 \\nUruguay 20251027.csv & \$102,526 & \$101,088 & \$1,438 \\nChile 20251027.csv & \$91,130 & \$90,975 & \$155 \\nEcuador 20251027.csv & \$81,493 & \$81,465 & \$28 \\nMexico 20251027.csv & \$54,921 & \$54,901 & \$20 \\nPeru 20251027.csv & \$45,272 & \$45,269 & \$3 \\nSalvador 20251027.csv & \$31,761 & \$31,764 & \$-4 \\nColombia 20251027.csv & \$31,733 & \$31,733 & \$0 \\nHonduras 20251027.csv & \$31,645 & \$31,652 & \$-8 \\nEgipto 20251027.csv & \$28,350 & \$28,350 & \$0 \\nEstados Unidos 20251027.csv & \$22,050 & \$22,050 & \$0 \\nParaguay 20251027.csv & \$9,450 & \$9,450 & \$0 \\nNicaragua 20251027.csv & \$6,300 & \$6,300 & \$0 \\n\bottomrule
+\end{tabular}
+\caption{Comparativa Acumulada Enero - Octubre 2025}
+\end{table}
+
+\newpage
+\section{Detalle Mensual por Pais}
+\subsection{Puerto Rico 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 24.6\% & \$172,220.64 & \$171,583.94 & \$636.70 \\
+2025-02 & 26.3\% & \$158,518.61 & \$157,868.24 & \$650.37 \\
+2025-03 & 25.3\% & \$187,279.29 & \$186,538.57 & \$740.72 \\
+2025-04 & 26.3\% & \$187,136.32 & \$186,349.12 & \$787.20 \\
+2025-05 & 27.6\% & \$188,696.19 & \$187,839.55 & \$856.64 \\
+2025-06 & 34.8\% & \$213,529.41 & \$212,162.69 & \$1,366.72 \\
+2025-07 & 37.6\% & \$229,248.10 & \$227,624.41 & \$1,623.69 \\
+2025-08 & 36.7\% & \$227,559.01 & \$225,995.81 & \$1,563.20 \\
+2025-09 & 35.9\% & \$246,208.32 & \$244,568.10 & \$1,640.22 \\
+2025-10 & 35.5\% & \$169,400.78 & \$168,276.15 & \$1,124.63 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Dominicana 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 69.1\% & \$27,255.10 & \$26,589.06 & \$666.04 \\
+2025-02 & 67.0\% & \$25,511.10 & \$24,898.40 & \$612.70 \\
+2025-03 & 71.3\% & \$28,007.10 & \$27,304.36 & \$702.74 \\
+2025-04 & 64.4\% & \$24,871.10 & \$24,293.69 & \$577.41 \\
+2025-05 & 66.9\% & \$26,847.50 & \$26,210.56 & \$636.94 \\
+2025-06 & 70.5\% & \$24,927.50 & \$24,294.51 & \$632.99 \\
+2025-07 & 71.2\% & \$26,167.10 & \$25,502.87 & \$664.23 \\
+2025-08 & 69.1\% & \$25,903.50 & \$25,264.03 & \$639.47 \\
+2025-09 & 74.2\% & \$27,103.50 & \$26,390.87 & \$712.63 \\
+2025-10 & 75.9\% & \$23,239.10 & \$22,594.94 & \$644.16 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Salvador 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,174.80 & \$3,174.80 & \$0.00 \\
+2025-02 & 0.0\% & \$3,172.40 & \$3,172.40 & \$0.00 \\
+2025-03 & 0.0\% & \$3,174.80 & \$3,174.80 & \$0.00 \\
+2025-04 & 0.0\% & \$3,174.80 & \$3,174.80 & \$0.00 \\
+2025-05 & 0.0\% & \$3,165.20 & \$3,165.20 & \$0.00 \\
+2025-06 & 9.5\% & \$3,174.80 & \$3,175.70 & \$-0.90 \\
+2025-07 & 11.1\% & \$3,182.00 & \$3,183.35 & \$-1.35 \\
+2025-08 & 0.0\% & \$3,178.80 & \$3,178.80 & \$0.00 \\
+2025-09 & 0.0\% & \$3,178.80 & \$3,178.80 & \$0.00 \\
+2025-10 & 10.3\% & \$3,184.40 & \$3,185.75 & \$-1.35 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Mexico 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 1.7\% & \$6,125.39 & \$6,123.26 & \$2.13 \\
+2025-02 & 5.0\% & \$5,200.70 & \$5,196.72 & \$3.98 \\
+2025-03 & 0.7\% & \$5,833.04 & \$5,832.22 & \$0.82 \\
+2025-04 & 3.3\% & \$5,118.33 & \$5,115.85 & \$2.48 \\
+2025-05 & 2.6\% & \$5,352.53 & \$5,350.28 & \$2.25 \\
+2025-06 & 1.2\% & \$5,505.16 & \$5,504.00 & \$1.16 \\
+2025-07 & 2.3\% & \$5,645.68 & \$5,643.30 & \$2.38 \\
+2025-08 & 1.5\% & \$5,750.67 & \$5,749.05 & \$1.62 \\
+2025-09 & 1.8\% & \$5,879.88 & \$5,877.82 & \$2.06 \\
+2025-10 & 2.5\% & \$4,509.41 & \$4,508.31 & \$1.10 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Argentina 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 12.0\% & \$17,544.86 & \$17,469.14 & \$75.72 \\
+2025-02 & 11.3\% & \$17,036.26 & \$16,967.13 & \$69.13 \\
+2025-03 & 11.0\% & \$19,189.58 & \$19,113.02 & \$76.56 \\
+2025-04 & 12.1\% & \$19,198.42 & \$19,113.99 & \$84.43 \\
+2025-05 & 13.9\% & \$21,286.66 & \$21,179.03 & \$107.63 \\
+2025-06 & 16.5\% & \$21,175.78 & \$21,047.94 & \$127.84 \\
+2025-07 & 18.0\% & \$22,645.34 & \$22,496.51 & \$148.83 \\
+2025-08 & 11.3\% & \$21,212.74 & \$21,125.55 & \$87.19 \\
+2025-09 & 12.0\% & \$23,127.10 & \$23,025.82 & \$101.28 \\
+2025-10 & 13.4\% & \$21,767.14 & \$21,660.88 & \$106.26 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Egipto 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-02 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-03 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-04 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-05 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-07 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-08 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-09 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-10 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Costa Rica 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 50.4\% & \$34,640.00 & \$34,066.11 & \$573.89 \\
+2025-02 & 44.5\% & \$31,259.00 & \$30,778.56 & \$480.44 \\
+2025-03 & 42.4\% & \$33,077.94 & \$32,606.09 & \$471.85 \\
+2025-04 & 33.8\% & \$34,186.75 & \$33,804.11 & \$382.64 \\
+2025-05 & 36.6\% & \$35,093.25 & \$34,673.74 & \$419.51 \\
+2025-06 & 35.2\% & \$41,456.94 & \$41,014.53 & \$442.41 \\
+2025-07 & 38.6\% & \$38,137.19 & \$37,674.21 & \$462.98 \\
+2025-08 & 33.9\% & \$40,611.69 & \$40,189.97 & \$421.72 \\
+2025-09 & 33.3\% & \$52,189.82 & \$51,713.12 & \$476.70 \\
+2025-10 & 32.3\% & \$43,190.50 & \$42,774.70 & \$415.80 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Ecuador 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.7\% & \$7,940.84 & \$7,939.38 & \$1.46 \\
+2025-02 & 1.6\% & \$7,659.80 & \$7,656.45 & \$3.35 \\
+2025-03 & 0.2\% & \$7,355.34 & \$7,354.87 & \$0.47 \\
+2025-04 & 0.2\% & \$8,268.72 & \$8,268.23 & \$0.49 \\
+2025-05 & 0.4\% & \$8,116.09 & \$8,115.11 & \$0.98 \\
+2025-06 & 0.9\% & \$7,823.74 & \$7,821.81 & \$1.93 \\
+2025-07 & 1.4\% & \$8,531.50 & \$8,528.03 & \$3.47 \\
+2025-08 & 0.5\% & \$9,087.34 & \$9,085.86 & \$1.48 \\
+2025-09 & 1.4\% & \$9,307.02 & \$9,303.07 & \$3.95 \\
+2025-10 & 5.4\% & \$7,402.18 & \$7,391.79 & \$10.39 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Chile 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 4.6\% & \$10,722.22 & \$10,706.03 & \$16.19 \\
+2025-02 & 5.4\% & \$9,432.78 & \$9,417.00 & \$15.78 \\
+2025-03 & 4.4\% & \$9,684.30 & \$9,671.00 & \$13.30 \\
+2025-04 & 4.5\% & \$8,338.98 & \$8,328.13 & \$10.85 \\
+2025-05 & 7.0\% & \$8,594.38 & \$8,576.54 & \$17.84 \\
+2025-06 & 7.0\% & \$8,919.66 & \$8,900.87 & \$18.79 \\
+2025-07 & 10.4\% & \$9,464.62 & \$9,434.05 & \$30.57 \\
+2025-08 & 2.6\% & \$8,887.82 & \$8,880.90 & \$6.92 \\
+2025-09 & 5.2\% & \$9,296.94 & \$9,282.14 & \$14.80 \\
+2025-10 & 4.8\% & \$7,788.21 & \$7,778.09 & \$10.12 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Uruguay 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 43.5\% & \$10,271.18 & \$10,127.71 & \$143.47 \\
+2025-02 & 48.6\% & \$9,904.78 & \$9,752.73 & \$152.05 \\
+2025-03 & 47.2\% & \$10,470.70 & \$10,310.64 & \$160.06 \\
+2025-04 & 44.7\% & \$10,198.22 & \$10,052.25 & \$145.97 \\
+2025-05 & 44.6\% & \$9,988.62 & \$9,847.45 & \$141.17 \\
+2025-06 & 40.5\% & \$10,533.58 & \$10,395.16 & \$138.42 \\
+2025-07 & 36.4\% & \$11,004.78 & \$10,872.46 & \$132.32 \\
+2025-08 & 46.1\% & \$10,177.26 & \$10,027.35 & \$149.91 \\
+2025-09 & 44.7\% & \$11,004.78 & \$10,842.56 & \$162.22 \\
+2025-10 & 41.5\% & \$8,971.66 & \$8,859.44 & \$112.22 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Bolivia 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 27.0\% & \$20,261.42 & \$20,062.34 & \$199.08 \\
+2025-02 & 26.7\% & \$19,235.38 & \$19,049.11 & \$186.27 \\
+2025-03 & 25.5\% & \$18,875.42 & \$18,701.00 & \$174.42 \\
+2025-04 & 20.4\% & \$17,830.90 & \$17,699.33 & \$131.57 \\
+2025-05 & 17.4\% & \$18,514.66 & \$18,398.10 & \$116.56 \\
+2025-06 & 17.3\% & \$16,722.10 & \$16,618.06 & \$104.04 \\
+2025-07 & 19.2\% & \$15,123.98 & \$15,020.24 & \$103.74 \\
+2025-08 & 19.0\% & \$12,923.02 & \$12,837.19 & \$85.83 \\
+2025-09 & 24.9\% & \$13,802.26 & \$13,680.33 & \$121.93 \\
+2025-10 & 26.8\% & \$11,738.38 & \$11,632.26 & \$106.12 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Guatemala 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 47.8\% & \$108,048.97 & \$106,888.41 & \$1,160.56 \\
+2025-02 & 48.5\% & \$102,783.35 & \$101,644.09 & \$1,139.26 \\
+2025-03 & 39.4\% & \$121,183.26 & \$120,222.61 & \$960.65 \\
+2025-04 & 39.7\% & \$116,475.96 & \$115,534.95 & \$941.01 \\
+2025-05 & 41.0\% & \$119,411.10 & \$118,403.08 & \$1,008.02 \\
+2025-06 & 43.5\% & \$121,963.29 & \$120,844.71 & \$1,118.58 \\
+2025-07 & 44.6\% & \$136,117.40 & \$134,844.47 & \$1,272.93 \\
+2025-08 & 39.9\% & \$128,738.11 & \$127,703.41 & \$1,034.70 \\
+2025-09 & 31.1\% & \$128,271.90 & \$127,579.42 & \$692.48 \\
+2025-10 & 36.8\% & \$104,735.40 & \$103,978.34 & \$757.06 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Peru 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$4,802.56 & \$4,802.56 & \$0.00 \\
+2025-02 & 0.0\% & \$4,896.24 & \$4,896.24 & \$0.00 \\
+2025-03 & 0.0\% & \$4,603.09 & \$4,603.09 & \$0.00 \\
+2025-04 & 0.0\% & \$4,930.97 & \$4,930.97 & \$0.00 \\
+2025-05 & 0.0\% & \$4,603.09 & \$4,603.09 & \$0.00 \\
+2025-06 & 0.0\% & \$4,240.48 & \$4,240.48 & \$0.00 \\
+2025-07 & 0.0\% & \$4,287.32 & \$4,287.32 & \$0.00 \\
+2025-08 & 0.0\% & \$4,544.94 & \$4,544.94 & \$0.00 \\
+2025-09 & 0.0\% & \$4,509.41 & \$4,509.41 & \$0.00 \\
+2025-10 & 27.6\% & \$3,853.65 & \$3,850.73 & \$2.92 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Paraguay 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-02 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-07 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-10 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Colombia 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-02 & 0.0\% & \$3,150.80 & \$3,150.80 & \$0.00 \\
+2025-03 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-04 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-05 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-06 & 0.0\% & \$3,174.80 & \$3,174.80 & \$0.00 \\
+2025-07 & 0.0\% & \$3,244.73 & \$3,244.73 & \$0.00 \\
+2025-08 & 0.0\% & \$3,202.80 & \$3,202.80 & \$0.00 \\
+2025-09 & 0.0\% & \$3,193.20 & \$3,193.20 & \$0.00 \\
+2025-10 & 0.0\% & \$3,166.80 & \$3,166.80 & \$0.00 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Honduras 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,181.20 & \$3,181.20 & \$0.00 \\
+2025-02 & 0.0\% & \$3,162.00 & \$3,162.00 & \$0.00 \\
+2025-03 & 12.5\% & \$3,159.60 & \$3,160.05 & \$-0.45 \\
+2025-04 & 0.0\% & \$3,176.40 & \$3,176.40 & \$0.00 \\
+2025-05 & 35.7\% & \$3,183.60 & \$3,188.10 & \$-4.50 \\
+2025-06 & 12.5\% & \$3,159.60 & \$3,160.05 & \$-0.45 \\
+2025-07 & 100.0\% & \$3,153.20 & \$3,154.55 & \$-1.35 \\
+2025-08 & 0.0\% & \$3,160.40 & \$3,160.40 & \$0.00 \\
+2025-09 & 14.3\% & \$3,158.00 & \$3,158.45 & \$-0.45 \\
+2025-10 & 100.0\% & \$3,150.80 & \$3,151.25 & \$-0.45 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Nicaragua 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-02 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\subsection{Estados Unidos 20251027.csv}
+Ratio LV/SC Aplicado: \textbf{1.50}
+
+
+\begin{longtable}{lrrrrr}
+\toprule
+\textbf{Mes} & \textbf{Adopci\'on} & \textbf{Bill 2024} & \textbf{Bill 2025} & \textbf{Dif (\$)} \\
+\midrule
+\endhead
+2025-01 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-02 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-03 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-04 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-05 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-07 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+2025-08 & 0.0\% & \$3,150.00 & \$3,150.00 & \$0.00 \\
+\bottomrule
+\end{longtable}
+\vspace{0.5cm}
+\end{document}

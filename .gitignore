@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Streamlit
+.streamlit/
+
+# Excel temporary files
+~$*
+
+# CSVs are too big for GitHub, use ZIPs instead
+Paises/*.csv
+
+# LaTeX artifacts (optional)
+latex_overleaf/
+*.aux
+*.log
+*.pdf
+*.out
+*.fls
+*.fdb_latexmk
+
+# VS Code
+.vscode/
+
+# Local data (Optional: Remove specific csvs if confidential, but needed for app)
+# If you want to commit data, DO NOT uncomment below.
+# Paises/
+# Facturacion/

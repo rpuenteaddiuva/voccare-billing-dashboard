@@ -1,0 +1,164 @@
+{
+    "Puerto Rico": {
+        "sc_total": 366176,
+        "sc_app": 115912,
+        "sc_voice": 250264,
+        "lv_total": 975074,
+        "cp": 84273,
+        "cm": 28739,
+        "adoption_pct": 31.654723411692736
+    },
+    "Dominicana": {
+        "sc_total": 23780,
+        "sc_app": 16628,
+        "sc_voice": 7152,
+        "lv_total": 228595,
+        "cp": 4378,
+        "cm": 7447,
+        "adoption_pct": 69.92430613961312
+    },
+    "Salvador": {
+        "sc_total": 220,
+        "sc_app": 8,
+        "sc_voice": 212,
+        "lv_total": 153,
+        "cp": 63,
+        "cm": 121,
+        "adoption_pct": 3.6363636363636362
+    },
+    "Mexico": {
+        "sc_total": 2449,
+        "sc_app": 53,
+        "sc_voice": 2396,
+        "lv_total": 28963,
+        "cp": 572,
+        "cm": 1856,
+        "adoption_pct": 2.1641486320947325
+    },
+    "Argentina": {
+        "sc_total": 17253,
+        "sc_app": 2290,
+        "sc_voice": 14963,
+        "lv_total": 80778,
+        "cp": 1313,
+        "cm": 6300,
+        "adoption_pct": 13.273053961629861
+    },
+    "Egipto": {
+        "sc_total": 0,
+        "sc_app": 0,
+        "sc_voice": 0,
+        "lv_total": 0,
+        "cp": 105,
+        "cm": 231,
+        "adoption_pct": 0.0
+    },
+    "Costa Rica": {
+        "sc_total": 42500,
+        "sc_app": 15855,
+        "sc_voice": 26645,
+        "lv_total": 216826,
+        "cp": 8719,
+        "cm": 10829,
+        "adoption_pct": 37.305882352941175
+    },
+    "Ecuador": {
+        "sc_total": 4733,
+        "sc_app": 58,
+        "sc_voice": 4675,
+        "lv_total": 23812,
+        "cp": 623,
+        "cm": 1068,
+        "adoption_pct": 1.2254384111557153
+    },
+    "Chile": {
+        "sc_total": 5613,
+        "sc_app": 315,
+        "sc_voice": 5298,
+        "lv_total": 76290,
+        "cp": 4384,
+        "cm": 5851,
+        "adoption_pct": 5.611972207375735
+    },
+    "Uruguay": {
+        "sc_total": 6692,
+        "sc_app": 2926,
+        "sc_voice": 3766,
+        "lv_total": 48303,
+        "cp": 614,
+        "cm": 2363,
+        "adoption_pct": 43.72384937238494
+    },
+    "Bolivia": {
+        "sc_total": 13048,
+        "sc_app": 2937,
+        "sc_voice": 10111,
+        "lv_total": 66987,
+        "cp": 2590,
+        "cm": 1521,
+        "adoption_pct": 22.50919681177192
+    },
+    "Guatemala": {
+        "sc_total": 194547,
+        "sc_app": 79832,
+        "sc_voice": 114715,
+        "lv_total": 130664,
+        "cp": 44822,
+        "cm": 19399,
+        "adoption_pct": 41.034814209419835
+    },
+    "Peru": {
+        "sc_total": 1625,
+        "sc_app": 29,
+        "sc_voice": 1596,
+        "lv_total": 5429,
+        "cp": 131,
+        "cm": 585,
+        "adoption_pct": 1.7846153846153845
+    },
+    "Paraguay": {
+        "sc_total": 0,
+        "sc_app": 0,
+        "sc_voice": 0,
+        "lv_total": 0,
+        "cp": 5,
+        "cm": 3,
+        "adoption_pct": 0.0
+    },
+    "Colombia": {
+        "sc_total": 169,
+        "sc_app": 0,
+        "sc_voice": 169,
+        "lv_total": 18,
+        "cp": 63,
+        "cm": 34,
+        "adoption_pct": 0.0
+    },
+    "Honduras": {
+        "sc_total": 122,
+        "sc_app": 17,
+        "sc_voice": 105,
+        "lv_total": 2,
+        "cp": 36,
+        "cm": 110,
+        "adoption_pct": 13.934426229508196
+    },
+    "Nicaragua": {
+        "sc_total": 0,
+        "sc_app": 0,
+        "sc_voice": 0,
+        "lv_total": 0,
+        "cp": 3,
+        "cm": 0,
+        "adoption_pct": 0.0
+    },
+    "Estados Unidos": {
+        "sc_total": 0,
+        "sc_app": 0,
+        "sc_voice": 0,
+        "lv_total": 0,
+        "cp": 150,
+        "cm": 61,
+        "adoption_pct": 0.0
+    }
+}
