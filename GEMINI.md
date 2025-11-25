@@ -42,3 +42,35 @@ Se determinó que la forma más precisa de alinear el CSV operativo con el Excel
     *   Media: Puerto Rico (~25%).
     *   Baja: Colombia, Ecuador, Perú (<2%).
 *   **Conclusión:** El descuento del 10% en SC App es el mecanismo clave que hace viable la propuesta, absorbiendo el costo de la transacción digital ($0.45) y el remanente de llamadas de voz.
+
+---
+
+## **Actualizaciones Recientes del Dashboard (Noviembre 2025)**
+
+### **Funcionalidades Añadidas y Mejoras de UX:**
+*   **Despliegue en Streamlit Cloud:** La aplicación está ahora optimizada para despliegue en la nube, manejando archivos grandes (`.csv` convertidos a `.zip`).
+*   **Filtro de Meses Mejorado:** Implementado un selector de meses tipo Excel con botones "Ver Todos" y "Limpiar", y selección individual dentro de un desplegable en la barra lateral.
+*   **Gráfica de Volumen Total de Servicios:** Añadida una nueva gráfica en la pestaña Operativa que muestra la tendencia mensual consolidada de Servicios Concluidos.
+*   **Toggle "Con Fee / Sin Fee":** Se añadió un selector en la barra lateral para incluir o excluir el Fee Mensual ($3,150 USD) de las estimaciones y de la Facturación Real, permitiendo análisis más flexibles.
+*   **Etiquetas de Valor en Gráficas:** Las gráficas de barras ahora muestran los valores numéricos directamente sobre las barras para una mejor legibilidad.
+*   **Rango de Descuento App Ampliado:** El slider de "Descuento por Uso de App" ahora permite seleccionar hasta un 50%.
+*   **Tabla de Datos Detallados Colapsable:** La tabla de datos se oculta por defecto en un `st.expander` para mejorar la experiencia móvil.
+
+### **Integración de Facturación Real:**
+Se han integrado los datos de facturación real (Enero a Noviembre 2025) para los siguientes países, permitiendo una comparación directa con las políticas simuladas:
+*   **Puerto Rico**
+*   **Argentina** (datos históricos desde Julio 2023)
+*   **Dominicana**
+*   **Bolivia** (suma de cuentas Mercantil y Normal)
+*   **Perú**
+*   **Chile**
+*   **Ecuador**
+*   **México**
+
+### **Correcciones y Refinamientos Técnicos:**
+*   Se corrigieron múltiples `IndentationError` y `SyntaxError` a lo largo del código.
+*   Se resolvió el `KeyError` en el Dashboard asegurando que la columna de facturación simulada se renombrara consistentemente a `Factura 2026` desde el origen (`run_simulation`).
+*   Se ajustó el `streamlit_app.py` para leer directamente los archivos `.zip` comprimidos.
+*   Se implementó una lógica robusta para el procesamiento de archivos Excel con estructuras complejas (e.g., Dominicana).
+
+Este `GEMINI.md` actualizado proporciona una visión general completa del estado actual del proyecto.

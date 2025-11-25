@@ -239,6 +239,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
                 
         except Exception as e:
             print(f"Error processing {c_name}: {e}")
+            st.error(f"Error processing {c_name}: {e}") # Uncomment to see in UI
             pass
 
     if not all_results:
@@ -252,6 +253,10 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
 
 # Ejecutar simulación
 df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter, base_fee_to_use)
+
+print(f"DEBUG: run_simulation finished. Fee={base_fee_to_use}, DF Shape={df.shape}")
+if df.empty:
+    print("DEBUG: DF IS EMPTY!")
 
 # --- FILTRO DE MESES (Mejorado - Botones de Acción) ---
 all_months = sorted(df['Mes'].unique().tolist()) if not df.empty else []
@@ -408,8 +413,10 @@ elif selected_country == "Costa Rica":
 
 # --- AJUSTE DE FEE EN FACTURACIÓN REAL ---
 if include_base_fee_option == "No" and 'Facturacion Real' in df_view.columns:
+    # Asegurar que es numérico para evitar errores de resta
+    df_view['Facturacion Real'] = pd.to_numeric(df_view['Facturacion Real'], errors='coerce').fillna(0)
+    
     # Restar el fee base (3150) de la facturación real para comparar "peras con peras"
-    # Solo restamos si el valor es mayor que el fee (para evitar negativos raros en meses sin facturación)
     df_view['Facturacion Real'] = df_view['Facturacion Real'].apply(lambda x: max(0, x - 3150) if x > 0 else 0)
 
 # --- TABS PRINCIPALES ---
