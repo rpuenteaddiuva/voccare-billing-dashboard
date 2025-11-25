@@ -118,50 +118,64 @@ selected_year = st.sidebar.selectbox(
     index=0
 )
 
+# --- CARGA DE DATOS (OPTIMIZADA) ---
+@st.cache_data
+def load_country_data(country_name, file_path):
+    """Carga y preprocesa los datos de un país. Se cachea para evitar relectura de disco."""
+    try:
+        df = pd.read_csv(file_path, sep=';', on_bad_lines='skip', compression='zip')
+        df.columns = df.columns.str.strip()
+        
+        # Date parsing optimizado
+        df['date_obj'] = pd.to_datetime(df['creacion_asistencia'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
+        df['month'] = df['date_obj'].dt.to_period('M')
+        return df
+    except Exception as e:
+        print(f"Error loading {country_name}: {e}")
+        return pd.DataFrame()
+
 # --- LÓGICA DE CÁLCULO ---
 @st.cache_data
 def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_param, selected_country_param):
-    # Cache invalidation trigger: v2026.1
+    # Cache invalidation trigger: v2026.2 (Optimized)
     report = GlobalPolicyReport(app_discount_pct=discount_val, app_fee=fee_val, base_fee=base_fee_param)
     
     all_results = []
     
-    for c_name, f_path in country_map.items():
+    # Determinar qué países procesar
+    countries_to_process = []
+    if selected_country_param == "Todos (Global)":
+        countries_to_process = list(country_map.items())
+    elif selected_country_param in country_map:
+        countries_to_process = [(selected_country_param, country_map[selected_country_param])]
+    
+    for c_name, f_path in countries_to_process:
         try:
-            # Optimization: Skip reading other countries if a specific one is selected
-            if selected_country_param != "Todos (Global)" and c_name != selected_country_param:
-                continue
+            # 1. Cargar datos (Desde caché si ya se leyó)
+            df = load_country_data(c_name, f_path)
+            
+            if df.empty: continue
+            
+            # 2. Filtrar por Año
+            df_year = df[df['date_obj'].dt.year == year_filter].copy()
+            if df_year.empty: continue
 
-            lv_ratio = report.get_ratio(c_name)
-            price_adj = report.get_price_adjust(c_name)
-            
-            df = pd.read_csv(f_path, sep=';', on_bad_lines='skip', compression='zip')
-            # CRITICAL FIX: Clean column names to find 'cantidad_llamadas'
-            df.columns = df.columns.str.strip()
-            
-            # Filter by Account if applicable
+            # 3. Filtrar por Cuenta
             if acc_filter != "Todas":
                 # Normalize column name check
                 acc_col = None
-                for c in df.columns:
+                for c in df_year.columns:
                     if c.lower().strip() == 'cuenta':
                         acc_col = c
                         break
                 if acc_col:
-                    df = df[df[acc_col].astype(str) == acc_filter]
+                    df_year = df_year[df_year[acc_col].astype(str) == acc_filter]
             
-            df['date_obj'] = pd.to_datetime(df['creacion_asistencia'], format='%Y-%m-%d %H:%M:%S', errors='coerce')
-            
-            # Dynamic Year Filter
-            df = df[df['date_obj'].dt.year == year_filter].copy()
-            
-            if df.empty: continue
+            if df_year.empty: continue
 
-            df['month'] = df['date_obj'].dt.to_period('M')
-            
             app_types = ['APP', 'ANCLAJE APP SOA', 'ANCLAJE', 'ANCLAJE_APP', 'ANCLAJE_APP_SOA']
             
-            for month, group in df.groupby('month'):
+            for month, group in df_year.groupby('month'):
                 sc_df = group[group['estado_asistencia'] == 'CONCLUIDA']
                 total_sc = len(sc_df)
                 app_sc = sc_df[sc_df['tipo_asignacion'].astype(str).str.strip().isin(app_types)].shape[0]
@@ -173,6 +187,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
                     eff_factor = report.get_efficiency_factor(c_name) # Use calibrated factor
                     valid_calls = int(raw_calls * eff_factor)
                 else:
+                    lv_ratio = report.get_ratio(c_name)
                     valid_calls = int(total_sc * lv_ratio) # Fallback
 
                 # Calculate Cancelled
@@ -188,12 +203,14 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
                     else:
                          cm = len(cancelled_df)
                 
+                price_adj = report.get_price_adjust(c_name)
+
                 # 2024 Calculation
                 cost_sc_24 = report.calculate_tier_cost(total_sc, report.tiers_sc, price_adj)
                 cost_lv_24 = report.calculate_tier_cost(valid_calls, report.tiers_lv, price_adj)
                 bill_2024 = (report.base_fee * price_adj) + cost_sc_24 + cost_lv_24
                 
-                # 2025 Calculation (Dynamic)
+                # 2026 Calculation (Dynamic)
                 base_sc_cost = report.calculate_tier_cost(total_sc, report.tiers_sc, price_adj)
                 discount_amount = 0
                 if total_sc > 0:
@@ -226,7 +243,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
                     '2024 LV': round(cost_lv_24, 2),
                     'Factura 2024': round(bill_2024, 2),
                     
-                    # Detalles 2026 (Simulación Política Nueva con Datos 2025)
+                    # Detalles 2026
                     '2026 SC Base': round(base_sc_cost, 2),
                     '2026 Desc.': round(discount_amount, 2),
                     '2026 App Fee': round(cost_app_25, 2),
