@@ -378,7 +378,7 @@ with tab_ops:
         m3.metric("Total Cancelaciones", f"{total_cx_ops:,.0f}")
         m4.metric("Total Llamadas Válidas", f"{total_calls_ops:,.0f}")
         
-        st.markdown("---")
+        st.divider()
         
         # Gráfica de Volumen Total
         st.subheader("Volumen Total de Servicios Concluidos")
