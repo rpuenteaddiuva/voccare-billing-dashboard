@@ -120,7 +120,7 @@ selected_year = st.sidebar.selectbox(
 
 # --- LÓGICA DE CÁLCULO ---
 @st.cache_data
-def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_param):
+def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_param, selected_country_param):
     # Cache invalidation trigger: v2026.1
     report = GlobalPolicyReport(app_discount_pct=discount_val, app_fee=fee_val, base_fee=base_fee_param)
     
@@ -129,8 +129,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
     for c_name, f_path in country_map.items():
         try:
             # Optimization: Skip reading other countries if a specific one is selected
-            # This speeds up the specific drill-down significantly
-            if selected_country != "Todos (Global)" and c_name != selected_country:
+            if selected_country_param != "Todos (Global)" and c_name != selected_country_param:
                 continue
 
             lv_ratio = report.get_ratio(c_name)
@@ -252,7 +251,7 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter, base_fee_para
     return pd.DataFrame(all_results)
 
 # Ejecutar simulación
-df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter, base_fee_to_use)
+df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter, base_fee_to_use, selected_country)
 
 print(f"DEBUG: run_simulation finished. Fee={base_fee_to_use}, DF Shape={df.shape}")
 if df.empty:
