@@ -243,11 +243,26 @@ def run_simulation(discount_val, fee_val, year_filter, acc_filter):
 # Ejecutar simulación
 df = run_simulation(app_discount_pct, app_fee, selected_year, account_filter)
 
+# --- FILTRO DE MESES (Sidebar) ---
+# Ahora que df existe, podemos obtener los meses
+all_months = sorted(df['Mes'].unique().tolist()) if not df.empty else []
+
+with st.sidebar.expander("📅 Filtrar Meses", expanded=False):
+    selected_months = st.multiselect(
+        "Selecciona los meses:",
+        options=all_months,
+        default=all_months
+    )
+
 # --- FILTRADO ---
 if selected_country != "Todos (Global)":
     df_view = df[df['Pais'] == selected_country].copy()
 else:
     df_view = df.copy()
+
+# --- FILTRADO POR MES(ES) ---
+if selected_months:
+    df_view = df_view[df_view['Mes'].isin(selected_months)].copy()
 
 # --- INTEGRACIÓN FACTURACIÓN REAL (SOLO PR POR AHORA) ---
 if selected_country == "Puerto Rico":
@@ -361,6 +376,15 @@ with tab_ops:
         
         st.markdown("---")
         
+        # Gráfica de Volumen Total
+        st.subheader("Volumen Total de Servicios Concluidos")
+        df_total_sc = df_plot.groupby('Mes')['SC Total'].sum().reset_index()
+        fig_total = px.line(df_total_sc, x='Mes', y='SC Total', markers=True,
+                            title="Tendencia Mensual de Servicios Totales",
+                            text='SC Total')
+        fig_total.update_traces(textposition="top center")
+        st.plotly_chart(fig_total, use_container_width=True)
+
         col_o1, col_o2 = st.columns(2)
         
         # Prepare data for plotting (convert Period to String)
