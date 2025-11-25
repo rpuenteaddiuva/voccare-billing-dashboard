@@ -391,5 +391,5 @@ with tab_data:
         df_view['Total Anual 2024'] = df_view.groupby('Pais')['Factura 2024'].transform('sum')
         df_view['Total Anual 2025'] = df_view.groupby('Pais')['Factura 2025'].transform('sum')
         
-        with st.expander("Ver Datos Detallados")):
+        with st.expander("Ver Datos Detallados"):
             st.dataframe(df_view)
