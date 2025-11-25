@@ -32,7 +32,7 @@ if st.sidebar.button("🔄 Recalcular (Limpiar Caché)"):
 app_discount_pct = st.sidebar.slider(
     "Descuento por Uso de App (%)",
     min_value=0,
-    max_value=30,
+    max_value=50,
     value=10,
     step=1,
     help="Porcentaje de descuento aplicado al costo de los Servicios Concluidos originados por App."
@@ -329,7 +329,8 @@ with tab_fin:
         fig_bar = px.bar(
             df_melt, x='Mes', y='Costo USD', color='Política', barmode='group',
             color_discrete_map={'Factura 2024': '#EF553B', 'Factura 2025': '#636EFA', 'Facturacion Real': '#00CC96'},
-            title="Evolución Mensual de Facturación"
+            title="Evolución Mensual de Facturación",
+            text_auto='.2s'
         )
         st.plotly_chart(fig_bar, use_container_width=True)
     
@@ -370,7 +371,8 @@ with tab_ops:
             st.subheader("Servicios Concluidos (App vs Voz)")
             df_sc = df_plot.groupby('Mes')[['SC App', 'SC Voz']].sum().reset_index()
             fig_sc = px.bar(df_sc, x='Mes', y=['SC App', 'SC Voz'], title="Mix de Canales",
-                            color_discrete_map={'SC App': '#00CC96', 'SC Voz': '#636EFA'})
+                            color_discrete_map={'SC App': '#00CC96', 'SC Voz': '#636EFA'},
+                            text_auto=True)
             st.plotly_chart(fig_sc, use_container_width=True)
             
         with col_o2:
@@ -378,7 +380,8 @@ with tab_ops:
             df_cx = df_plot.groupby('Mes')[['Cancelado Posterior', 'Cancelado Momento']].sum().reset_index()
             fig_cx = px.bar(df_cx, x='Mes', y=['Cancelado Posterior', 'Cancelado Momento'], 
                             title="Eficiencia de Cancelaciones",
-                            color_discrete_map={'Cancelado Posterior': '#EF553B', 'Cancelado Momento': '#FFA15A'})
+                            color_discrete_map={'Cancelado Posterior': '#EF553B', 'Cancelado Momento': '#FFA15A'},
+                            text_auto=True)
             st.plotly_chart(fig_cx, use_container_width=True)
             
         st.subheader("Volumen de Llamadas Válidas (Estimado)")
