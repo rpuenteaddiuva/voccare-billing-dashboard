@@ -54,7 +54,7 @@ class GlobalPolicyReport:
             "Nicaragua": 0.50, # CSV calls are 0. Using default 0.50
             "Paraguay": 0.50, # CSV calls are 0. Using default 0.50
             "Peru": 0.95,       
-            "Puerto Rico": 0.13, 
+            "Puerto Rico": 0.50, 
             "Salvador": 0.50, # Factor 16.41 (Excel > CSV) - Using default 0.50 as a safeguard
             "Uruguay": 0.45,    
             "Bolivia": 0.46,    
